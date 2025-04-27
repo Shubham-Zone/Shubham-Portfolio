@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+/* body {
+    @apply bg-black text-white font-sans;
+} */
+
+.theme-dark {
+    --bg: #000;
+    --text: #fff;
+  }
+  
+  .theme-hacker {
+    --bg: #000;
+    --text: #00FF41;
+  }
+  
+  .theme-bhakti {
+    --bg: #fff8e1;
+    --text: #ff6f00;
+  }
+  
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+
+  /* in your global CSS */
+.text-glow {
+  text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00;
+}
+
+@keyframes spin-3d {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  50% {
+    transform: rotateX(180deg) rotateY(180deg) rotateZ(90deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(180deg);
+  }
+}
+
+@keyframes spin-3d-reverse {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  50% {
+    transform: rotateX(-180deg) rotateY(-180deg) rotateZ(-90deg);
+  }
+  100% {
+    transform: rotateX(-360deg) rotateY(-360deg) rotateZ(-180deg);
+  }
+}
+
+.animate-spin-3d {
+  animation: spin-3d 30s linear infinite;
+}
+
+.animate-spin-3d-reverse {
+  animation: spin-3d-reverse 50s linear infinite;
+}
