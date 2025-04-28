@@ -1,6 +1,24 @@
 import { motion } from 'framer-motion';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_wod373o', 'your_template_id', e.target, 'your_user_id')
+      .then(
+        (result) => {
+          console.log(result.text); 
+          alert('Message sent successfully!');
+        },
+        (error) => {
+          console.log(error.text); 
+          alert('Failed to send the message. Please try again later.');
+        }
+      );
+  };
+
   return (
     <section id="contact" className="py-20 bg-black text-green-400 font-mono px-6 md:px-24">
       <motion.h2
@@ -13,6 +31,7 @@ const Contact = () => {
       </motion.h2>
 
       <motion.form
+        onSubmit={sendEmail}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -20,15 +39,18 @@ const Contact = () => {
       >
         <input
           type="text"
+          name="user_name"
           placeholder="Your Name"
           className="p-4 bg-black border border-green-400 text-green-300 placeholder-green-500 focus:outline-none focus:border-green-500 rounded"
         />
         <input
           type="email"
+          name="user_email"
           placeholder="Your Email"
           className="p-4 bg-black border border-green-400 text-green-300 placeholder-green-500 focus:outline-none focus:border-green-500 rounded"
         />
         <textarea
+          name="message"
           rows="5"
           placeholder="Your Message"
           className="p-4 bg-black border border-green-400 text-green-300 placeholder-green-500 focus:outline-none focus:border-green-500 rounded"
