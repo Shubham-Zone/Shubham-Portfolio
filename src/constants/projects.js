@@ -12,11 +12,11 @@ export const projects = [
     {
         title: "ChatConnect",
         description: "Real-time chat app using Node.js, React.js, MongoDB, TailwindCSS, and AWS S3 storage.",
-        github: "https://github.com/Shubham-Zone/Chat-App", // Update if your repo link is different
+        github: "https://github.com/Shubham-Zone/Chat-App", 
     },
     {
         title: "Metrics Dashboard",
         description: "Professional API metrics dashboard with real-time stats, bar charts, pie charts, and filtering.",
-        github: "https://github.com/Shubham-Zone/Metrics-Dashboard", // Update if needed
+        github: "https://github.com/Shubham-Zone/Metrics-Dashboard", 
     },
 ];
