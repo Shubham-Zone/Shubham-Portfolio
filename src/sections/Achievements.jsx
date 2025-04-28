@@ -19,15 +19,15 @@ const Achievements = () => {
         transition={{ duration: 0.8 }}
         className="space-y-4"
       >
-        {achievements.map((achievement) => 
-        <div className="achievement-item p-8 bg-black rounded-lg shadow-xl hover:bg-green-900 transition-colors duration-300">
-        <h3 className="text-2xl font-semibold text-green-400 hover:text-green-300 tracking-wider">
-          {achievement.title}
-        </h3>
-        <p className="text-white mt-2 text-lg leading-relaxed">
-          {achievement.desc}
-        </p>
-      </div>
+        {achievements.map((achievement, index) =>
+          <div key={index} className="achievement-item p-8 bg-black rounded-lg shadow-xl hover:bg-green-900 transition-colors duration-300">
+            <h3 className="text-2xl font-semibold text-green-400 hover:text-green-300 tracking-wider">
+              {achievement.title}
+            </h3>
+            <p className="text-white mt-2 text-lg leading-relaxed">
+              {achievement.desc}
+            </p>
+          </div>
         )}
       </motion.div>
     </section>

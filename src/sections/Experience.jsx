@@ -19,8 +19,8 @@ const Experience = () => {
         transition={{ duration: 0.8 }}
         className="grid gap-10 md:grid-cols-2"
       >
-        {experience.map((exp) =>
-          <div className="p-8 bg-gradient-to-br from-green-900 via-black to-black rounded-lg shadow-2xl hover:scale-105 transition-transform duration-300">
+        {experience.map((exp, index) =>
+          <div key={index} className="p-8 bg-gradient-to-br from-green-900 via-black to-black rounded-lg shadow-2xl hover:scale-105 transition-transform duration-300">
             <h3 className="text-2xl font-bold mb-2">$ {exp.title}</h3>
             <p className="text-white mb-4">
               {exp.desc}
