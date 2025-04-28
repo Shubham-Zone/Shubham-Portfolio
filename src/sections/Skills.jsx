@@ -26,6 +26,33 @@ const Skills = () => {
       >
         {/* Root Node */}
         <div className="skill-tree">
+
+              {/* Languages */}
+              <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="branch"
+          >
+            <h3 className="text-3xl font-semibold text-green-400 text-center mb-6">
+              Coding Languages
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+              <div className="skill-item p-4 bg-black rounded-lg shadow-md hover:bg-green-900 transition-all duration-300 text-center">
+                <SiCplusplus className="text-5xl mb-4 transition-transform duration-300 hover:scale-110 text-green-400" />
+                <h3 className="text-lg font-semibold text-green-400">C++</h3>
+              </div>
+              <div className="skill-item p-4 bg-black rounded-lg shadow-md hover:bg-green-900 transition-all duration-300 text-center">
+                <RiJavaFill className="text-5xl mb-4 transition-transform duration-300 hover:scale-110 text-green-400" />
+                <h3 className="text-lg font-semibold text-green-400">Core Java</h3>
+              </div>
+              <div className="skill-item p-4 bg-black rounded-lg shadow-md hover:bg-green-900 transition-all duration-300 text-center">
+                <SiDart className="text-5xl mb-4 transition-transform duration-300 hover:scale-110 text-green-400" />
+                <h3 className="text-lg font-semibold text-green-400">Dart</h3>
+              </div>
+            </div>
+          </motion.div>
+          
           {/* Frontend Branch */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -118,31 +145,6 @@ const Skills = () => {
             </div>
           </motion.div>
 
-          {/* Languages */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="branch"
-          >
-            <h3 className="text-3xl font-semibold text-green-400 text-center mb-6">
-              Coding Languages
-            </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-              <div className="skill-item p-4 bg-black rounded-lg shadow-md hover:bg-green-900 transition-all duration-300 text-center">
-                <SiCplusplus className="text-5xl mb-4 transition-transform duration-300 hover:scale-110 text-green-400" />
-                <h3 className="text-lg font-semibold text-green-400">C++</h3>
-              </div>
-              <div className="skill-item p-4 bg-black rounded-lg shadow-md hover:bg-green-900 transition-all duration-300 text-center">
-                <RiJavaFill className="text-5xl mb-4 transition-transform duration-300 hover:scale-110 text-green-400" />
-                <h3 className="text-lg font-semibold text-green-400">Core Java</h3>
-              </div>
-              <div className="skill-item p-4 bg-black rounded-lg shadow-md hover:bg-green-900 transition-all duration-300 text-center">
-                <SiDart className="text-5xl mb-4 transition-transform duration-300 hover:scale-110 text-green-400" />
-                <h3 className="text-lg font-semibold text-green-400">Dart</h3>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </motion.div>
     </section>
