@@ -24,7 +24,7 @@ const Navbar = () => {
       >
         <li>
           <a
-            href="/path-to-your-resume.pdf"
+            href="/Shubham_kumar.pdf"
             download
             className="hover:text-green-500 transition-colors duration-300"
           >

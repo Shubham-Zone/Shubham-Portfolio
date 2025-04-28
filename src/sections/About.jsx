@@ -39,7 +39,7 @@ const About = () => (
           <div className="flex flex-col gap-2 text-green-300">
             <p className="text-green-500 font-bold">$ cat mission.txt</p>
             <p className="text-green-300 leading-relaxed">
-              Build impactful, scalable tech solutions.  
+              Build impactful, scalable tech solutions.
               Keep learning. Keep shipping. Stay humble.
             </p>
           </div>
@@ -64,13 +64,14 @@ const About = () => (
         className="flex justify-center mt-10 md:mt-0"
       >
         <pre className="text-green-600 text-xs sm:text-sm leading-tight">
-{`
- _______ _           _     _                 
-|__   __| |         (_)   | |                
-   | |  | |__   __ _ _  __| | ___ _ __  ___  
-   | |  | '_ \\ / _\` | |/ _\` |/ _ \\ '_ \\/ __| 
-   | |  | | | | (_| | | (_| |  __/ | | \\__ \\ 
-   |_|  |_| |_|\\__,_|_|\\__,_|\\___|_| |_|___/ 
+          {`
+  Coder
+ ______   ____    ____  ______
+ / ____| |  _ \\  |  _ \\ |  ____|
+| |      | | | | | | | || |___
+| |      | |_| | | |_| ||  ___|
+| |____  |____/  |____/ | |
+ \\_____|                   |_|
 `}
         </pre>
       </motion.div>
