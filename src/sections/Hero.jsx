@@ -30,11 +30,17 @@ const Hero = () => {
       </motion.p>
 
       <motion.a
-        href="#contact"
+        // href="#contact"
+        onClick={() => {
+          const element = document.getElementById("contact");
+          element.scrollIntoView({
+            behavior: "smooth"
+          })
+        }}
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.6 }}
-        className="z-10 mt-10 px-8 py-4 border border-green-400 hover:bg-green-500 hover:text-black transition-colors duration-300 rounded-lg text-lg shadow-lg shadow-green-500/20"
+        className="hover:cursor-pointer z-10 mt-10 px-8 py-4 border border-green-400 hover:bg-green-500 hover:text-black transition-colors duration-300 rounded-lg text-lg shadow-lg shadow-green-500/20"
       >
         $ Get in Touch
       </motion.a>
