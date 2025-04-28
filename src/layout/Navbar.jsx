@@ -33,24 +33,42 @@ const Navbar = () => {
         </li>
         <li>
           <a
-            href="#about"
-            className="hover:text-green-500 transition-colors duration-300"
+            // href="#about"
+            className="hover:text-green-500 hover:cursor-pointer transition-colors duration-300"
+            onClick={() => {
+              const element = document.getElementById("about");
+              element?.scrollIntoView({
+                behavior: 'smooth'
+              });
+            }}
           >
             about/
           </a>
         </li>
         <li>
           <a
-            href="#projects"
-            className="hover:text-green-500 transition-colors duration-300"
+            // href="#projects"
+            className="hover:text-green-500 hover:cursor-pointer transition-colors duration-300"
+            onClick={() => {
+              const element = document.getElementById("projects");
+              element.scrollIntoView({
+                behavior: "smooth"
+              });
+            }}
           >
             projects/
           </a>
         </li>
         <li>
           <a
-            href="#contact"
-            className="hover:text-green-500 transition-colors duration-300"
+            // href="#contact"
+            className="hover:text-green-500 hover:cursor-pointer transition-colors duration-300"
+            onClick={() => {
+              const element = document.getElementById("contact");
+              element.scrollIntoView({
+                behavior: "smooth"
+              });
+            }}
           >
             contact/
           </a>
