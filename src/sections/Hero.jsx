@@ -1,21 +1,35 @@
 import { motion } from 'framer-motion';
+import EyeBall from '../components/EyeBall';
 
 const Hero = () => {
+
+
   return (
     <section id="hero" className="relative min-h-screen flex flex-col justify-center items-center bg-black text-green-400 font-mono px-6 overflow-hidden">
 
-      {/* Softer 3D Bubble */}
+
+
+
+      {/* Bubble Background */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
         <div className="w-96 h-96 rounded-full bg-green-400 opacity-15 blur-3xl animate-spin-3d shadow-[0_0_60px_15px_rgba(34,197,94,0.3)]"></div>
         <div className="w-64 h-64 rounded-full bg-green-500 opacity-20 blur-2xl animate-spin-3d-reverse absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-[0_0_40px_10px_rgba(34,197,94,0.4)]"></div>
       </div>
+
+      {/* EyeBalls above heading */}
+      <div className="flex items-center justify-center space-x-4 mb-4 sm:mb-6 hidden sm:flex">
+        <EyeBall />
+        <EyeBall />
+      </div>
+
 
       {/* Foreground Text */}
       <motion.h1
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
-        className="z-10 text-5xl sm:text-7xl mb-6 text-center text-glow tracking-widest"
+        className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl text-center text-glow tracking-widest mb-6"
+
       >
         $ Hello, World!
       </motion.h1>
@@ -30,7 +44,6 @@ const Hero = () => {
       </motion.p>
 
       <motion.a
-        // href="#contact"
         onClick={() => {
           const element = document.getElementById("contact");
           element.scrollIntoView({
@@ -44,7 +57,6 @@ const Hero = () => {
       >
         $ Get in Touch
       </motion.a>
-
     </section>
   );
 };
