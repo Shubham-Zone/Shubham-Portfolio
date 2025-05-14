@@ -14,6 +14,7 @@ const EyeBall = () => {
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
+  
 
   const calculatePupilPosition = () => {
     if (!eyeRef.current) return { x: 0, y: 0 };

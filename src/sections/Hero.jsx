@@ -3,12 +3,8 @@ import EyeBall from '../components/EyeBall';
 
 const Hero = () => {
 
-
   return (
     <section id="hero" className="relative min-h-screen flex flex-col justify-center items-center bg-black text-green-400 font-mono px-6 overflow-hidden">
-
-
-
 
       {/* Bubble Background */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
@@ -16,12 +12,11 @@ const Hero = () => {
         <div className="w-64 h-64 rounded-full bg-green-500 opacity-20 blur-2xl animate-spin-3d-reverse absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-[0_0_40px_10px_rgba(34,197,94,0.4)]"></div>
       </div>
 
-      {/* EyeBalls above heading */}
+      {/* EyeBalls */}
       <div className="flex items-center justify-center space-x-4 mb-4 sm:mb-6 hidden sm:flex">
         <EyeBall />
         <EyeBall />
       </div>
-
 
       {/* Foreground Text */}
       <motion.h1
