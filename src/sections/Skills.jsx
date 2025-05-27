@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { FaNode, FaReact, FaAws, FaJava } from "react-icons/fa"; // Importing relevant icons
+import { FaNode, FaReact, FaAws, FaJava, FaDocker, FaGitlab } from "react-icons/fa"; // Importing relevant icons
 import { TbBrandFlutter } from "react-icons/tb";
-import { SiCplusplus, SiDart, SiMongodb, SiSpringboot } from "react-icons/si";
+import { SiApachekafka, SiCplusplus, SiDart, SiMongodb, SiSpringboot } from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
 import { RiJavaFill, RiNextjsFill } from "react-icons/ri";
 import { DiMysql } from "react-icons/di";
@@ -27,8 +27,8 @@ const Skills = () => {
         {/* Root Node */}
         <div className="skill-tree">
 
-              {/* Languages */}
-              <motion.div
+          {/* Languages */}
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -52,7 +52,7 @@ const Skills = () => {
               </div>
             </div>
           </motion.div>
-          
+
           {/* Frontend Branch */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -141,6 +141,18 @@ const Skills = () => {
               <div className="skill-item p-4 bg-black rounded-lg shadow-md hover:bg-green-900 transition-all duration-300 text-center">
                 <FaAws className="text-5xl mb-4 transition-transform duration-300 hover:scale-110 text-green-400" />
                 <h3 className="text-lg font-semibold text-green-400">AWS</h3>
+              </div>
+              <div className="skill-item p-4 bg-black rounded-lg shadow-md hover:bg-green-900 transition-all duration-300 text-center">
+                <SiApachekafka className="text-5xl mb-4 transition-transform duration-300 hover:scale-110 text-green-400" />
+                <h3 className="text-lg font-semibold text-green-400">Apache Kafka</h3>
+              </div>
+              <div className="skill-item p-4 bg-black rounded-lg shadow-md hover:bg-green-900 transition-all duration-300 text-center">
+                <FaDocker className="text-5xl mb-4 transition-transform duration-300 hover:scale-110 text-green-400" />
+                <h3 className="text-lg font-semibold text-green-400">Docker</h3>
+              </div>
+              <div className="skill-item p-4 bg-black rounded-lg shadow-md hover:bg-green-900 transition-all duration-300 text-center">
+                <FaGitlab className="text-5xl mb-4 transition-transform duration-300 hover:scale-110 text-green-400" />
+                <h3 className="text-lg font-semibold text-green-400">GitLab CI/CD</h3>
               </div>
             </div>
           </motion.div>
